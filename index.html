@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Projet Dev-104</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,sans-serif;
+}
+
+body{
+    background:#f2f2f2;
+}
+
+header{
+    background:#88ca0e;
+    color:white;
+    text-align:center;
+    padding:20px;
+}
+
+.container{
+    display:flex;
+    min-height:80vh;
+}
+
+aside{
+    width:220px;
+    background:#343a40;
+    color:white;
+    padding:20px;
+}
+
+aside h2{
+    margin-bottom:20px;
+}
+
+aside ul{
+    list-style:none;
+}
+
+aside li{
+    padding:10px;
+    margin-bottom:10px;
+    background:#505b66;
+    border-radius:5px;
+    transition:0.3s;
+}
+
+aside li:hover{
+    background:#12ee2f;
+}
+
+main{
+    flex:1;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+}
+
+main h1{
+    color:#7cc507;
+    font-size:45px;
+    animation:zoom 2s infinite;
+}
+
+main h2{
+    margin-top:15px;
+    color:#333;
+}
+
+button{
+    margin-top:30px;
+    padding:10px 25px;
+    border:none;
+    background:#04aaa2;
+    color:white;
+    border-radius:5px;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+button:hover{
+    transform:scale(1.05);
+}
+
+#message{
+    margin-top:20px;
+    color:green;
+    font-weight:bold;
+}
+
+footer{
+    background:#212529;
+    color:white;
+    text-align:center;
+    padding:15px;
+}
+
+@keyframes zoom{
+0%{transform:scale(1);}
+50%{transform:scale(1.1);}
+100%{transform:scale(1);}
+}
+
+@media(max-width:768px){
+.container{
+    flex-direction:column;
+}
+
+aside{
+    width:100%;
+}
+}
+</style>
+
+</head>
+<body>
+
+<header>
+    <h1>Projet Web Dev-104</h1>
+</header>
+
+<div class="container">
+
+<aside>
+
+<h2>Menu</h2>
+
+<ul>
+<li>Accueil</li>
+<li>Formation</li>
+<li>Projet</li>
+<li>Contact</li>
+</ul>
+
+</aside>
+
+<main>
+
+<h1>Hello Dev-104</h1>
+
+<h2>Lahcen Elharad</h2>
+
+<button onclick="showMessage()">Cliquez ici</button>
+
+<p id="message"></p>
+
+</main>
+
+</div>
+
+<footer>
+
+<p>© 2026 - CMC Dev-104</p>
+
+</footer>
+
+<script>
+
+function showMessage(){
+
+document.getElementById("message").innerHTML="Bienvenue dans mon projet Web !";
+
+}
+
+</script>
+
+</body>
+</html>
